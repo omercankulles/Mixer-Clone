@@ -1,0 +1,286 @@
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap');
+
+html,
+body{
+    background: #253141;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-image: linear-gradient(to bottom, rgba(37, 49, 65, 0.9) 0%,
+    #253141 80%,
+    #253141 100%),
+    url("/img/bg.jpg");   
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+header .left-menu{
+    display: flex;
+}
+
+header .left-menu .logo{
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}
+
+header .left-menu .menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+}
+
+header .left-menu .menu a{
+   font-size: 1.2rem;
+   color:rgba(255, 255, 255, 0.6);
+   text-decoration: none;
+   padding: 0 20px;
+   text-transform: uppercase;
+   font-weight: 300;
+   transition: all 0.2s ease-in-out;
+}
+header .left-menu .menu a:hover{
+    color:rgba(255, 255, 255, 1);
+ }
+
+header .left-menu .menu a .fa{
+    margin-left: 10px;
+}
+header .right-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .right-menu .language{
+    color:rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    padding: 0 60px 0 0;
+    text-transform: uppercase;
+    font-weight: 300;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+header .right-menu .language:hover{
+    color:rgba(255, 255, 255, 1);
+}
+
+header .right-menu .language .fa{
+    margin-left: 10px;
+}
+
+header .right-menu .signin{
+    background: #0375d5;
+    border-radius: 4px;
+    padding:10px 20px;
+    font-size: .85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color:white;
+}
+
+.container{
+    width: 1400px;
+    margin:0 auto;
+}
+
+.section-title{
+    font-size: 1.8rem;
+    color:white;
+    margin-bottom: 30px;
+}
+
+#featured{
+    padding: 50px 0 0;
+}
+
+#featured .videos-section{
+    display: grid;
+    grid-template-columns: 1fr 2fr 620px 2fr 1fr;
+    grid-gap:10px;
+}
+
+#featured .videos-section .video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#featured .videos-section .video .image{
+    width: 100%;
+    height: 300px;
+    background: url("/img/slider.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+#featured .videos-section .video.center{
+    width: 100%;
+    height: 349px;
+    background: red;
+}
+
+#featured .videos-section .video.center .image{
+    width: 100%;
+    height: 349px;
+    background: url("/img/slider1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.05);
+    border: 2px solid #00b4f0;
+    cursor: pointer;
+}
+
+#featured .videos-section .video:nth-child(1) .image , #featured .videos-section .video:nth-child(5) .image{
+    position: relative;
+}
+
+#featured .videos-section .video:nth-child(1) .image .arrow{
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    transition: all 0.2s ease-in-out;
+}
+
+#featured .videos-section .video:nth-child(1) .image .arrow:hover{
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#featured .videos-section .video:nth-child(5) .image .arrow{
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    right: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+#featured .videos-section .video:nth-child(5) .image .arrow:hover{
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#featured .videos-section .video:nth-child(1) .image .arrow .fa,#featured .videos-section .video:nth-child(5) .image .arrow .fa{
+    font-size: 3rem;
+    color: #00b4f0;
+}
+
+#featured .dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#featured .dots .circles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#featured .dots .circles .circle{
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#featured .dots .circles .circle .background-color{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+    transition: all 0.2s ease-in-out;
+}
+
+#featured .dots .circles .circle:hover .background-color{
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #00b4f0;
+}
+
+#featured .dots .circles .circle.active .background-color{
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #00b4f0;
+}
+
+#top-games{
+}
+
+#top-games .games{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap:10px;
+}
+
+#top-games .games .game{
+    background:url("/img/apex.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    border-radius: 5px;
+    position: relative;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#top-games .games .game .info{
+    background: #253041;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    color:white;
+}
+
+#top-games .games .game:hover .info{
+    background: #313f55;
+}
+
+#top-games .games .game .info .title{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#top-games .games .game .info .views{
+    font-weight: 300;
+    color:#8c919d;
+    font-size: 0.9rem;
+}
+
+#top-games .games .game .info .views .fa{
+    margin-right: 5px;
+}
+
+.fa-eye:before {
+    content: "\f06e";
+    margin-right: 5px;
+}
+
